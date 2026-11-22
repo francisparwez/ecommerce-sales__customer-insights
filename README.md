@@ -35,13 +35,10 @@ ecommerce-sales__customer-insights/
 ├── PowerBI
 ├── Python
 │   ├── 01_data_loading_and_inspection.ipynb
-│   ├── 02_data_quality_assessment.ipynb
-│   ├── 03_data_cleaning.ipynb
-│   └── 04_exploratory_data_analysis.ipynb
+│   └── 02_data_quality_assessment.ipynb
 ├── Reports
 ├── Screenshots
 ├── SQL
-│   └── ecommerce_analysis.sql
 └── README.md
 ```
 
@@ -49,8 +46,8 @@ ecommerce-sales__customer-insights/
 
 The project will be completed in the following stages:
 
-1. **Data Loading & Inspection — Completed:** Loaded the 50,000-row, 18-column raw CSV dataset into Pandas and inspected its dimensions, columns, data types, sample records, and descriptive statistics. Validated order-level consistency, customer registration dates, duplicate records, and missing-value counts. Confirmed that each order is associated with one customer and one order date. Identified 100 exact duplicate rows and missing values in `Category`, `Region`, `PaymentMethod`, and `ReturnDate`. The raw dataset was retained without performing cleaning.
-2. **Data Quality Assessment:** Investigate missing values, duplicate records, inconsistent formatting, invalid values, and potential outliers.
+1. **Data Loading & Inspection — Completed:** Loaded the 50,000-row, 18-column raw CSV dataset into Pandas and inspected its dimensions, columns, data types, sample records, and descriptive statistics. Validated order-level consistency and customer registration-date chronology. Identified 100 exact duplicate occurrences and missing values in `Category`, `Region`, `PaymentMethod`, and `ReturnDate`. Confirmed that each order is associated with one customer and one order date. The raw dataset was retained without cleaning.
+2. **Data Quality Assessment — Assessment performed; final summary cell requires validation:** Used Pandas and NumPy to assess missing values and percentages, exact duplicates, categorical formatting, numerical validity, date consistency, financial calculation relationships, and potential statistical outliers using the IQR method. Findings include 90 missing `Category` values, 80 missing `Region` values, 79 missing `PaymentMethod` values, and 46,810 missing `ReturnDate` values (consistent with non-returned orders); 100 exact duplicate occurrences; 28 `Category` text variations representing 7 logical categories; 10 negative `UnitPrice` values; 15 zero `Quantity` values; and 12 `DiscountPct` values above 100%. Date logic and the three financial calculation checks passed with no mismatches. IQR analysis identified potential outliers in several numerical columns; all 1,588 `UnitPrice` outliers were associated with Smart Watch transactions. No cleaning or changes were made to the raw dataset.
 3. **Data Cleaning:** Apply appropriate cleaning and validation steps, preserving the original raw dataset and saving the processed data separately.
 4. **Exploratory Data Analysis:** Analyse sales performance, customer purchasing behaviour, product and category trends, and regional performance.
 5. **SQL Business Analysis:** Develop SQL queries to investigate business questions and calculate relevant sales and customer metrics.
@@ -60,9 +57,9 @@ The project will be completed in the following stages:
 
 ## Project Status
 
-**Status:** Dataset setup, loading, and initial inspection completed.
+**Status:** Dataset loading and inspection completed; data quality assessment performed.
 
-The raw dataset has been added to the project and inspected using the first Python notebook. Its structure, descriptive statistics, order-level consistency, registration-date chronology, duplicate records, and missing values have been checked. Data quality assessment, cleaning, exploratory analysis, SQL analysis, dashboard development, customer segmentation, and reporting remain pending.
+The raw dataset has been loaded and inspected using the first Python notebook. The second notebook investigates missing values, duplicates, categorical inconsistencies, invalid numerical values, date logic, financial calculation consistency, and potential statistical outliers. The raw dataset remains unchanged. The consolidated data-quality summary cell requires a final correction and successful re-execution before the assessment notebook is considered fully finalised. Data cleaning, exploratory analysis, SQL analysis, dashboard development, customer segmentation, and reporting remain pending.
 
 ## Disclaimer
 
