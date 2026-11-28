@@ -1,4 +1,4 @@
-# E-Commerce Sales & Customer Insights Dashboard
+# E-Commerce Sales & Customer Insights
 
 ## Project Overview
 
